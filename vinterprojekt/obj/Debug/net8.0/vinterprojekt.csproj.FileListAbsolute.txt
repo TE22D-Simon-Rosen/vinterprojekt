@@ -1,0 +1,14 @@
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\bin\Debug\net8.0\vinterprojekt.exe
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\bin\Debug\net8.0\vinterprojekt.deps.json
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\bin\Debug\net8.0\vinterprojekt.runtimeconfig.json
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\bin\Debug\net8.0\vinterprojekt.dll
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\bin\Debug\net8.0\vinterprojekt.pdb
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.AssemblyInfoInputs.cache
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.AssemblyInfo.cs
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.csproj.CoreCompileInputs.cache
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.dll
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\refint\vinterprojekt.dll
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.pdb
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.genruntimeconfig.cache
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\ref\vinterprojekt.dll
