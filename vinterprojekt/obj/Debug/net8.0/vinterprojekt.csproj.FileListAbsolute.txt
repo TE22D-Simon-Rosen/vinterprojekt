@@ -12,3 +12,4 @@ c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinter
 c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.pdb
 c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.genruntimeconfig.cache
 c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\ref\vinterprojekt.dll
+c:\Users\simon.rosen2\Documents\Programmering 2 med micke b\vinterprojekt\vinterprojekt\obj\Debug\net8.0\vinterprojekt.sourcelink.json
