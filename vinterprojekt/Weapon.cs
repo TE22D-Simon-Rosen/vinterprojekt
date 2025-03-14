@@ -2,16 +2,16 @@ class Weapon {
     public string name = "";
     public int minDmg;
     public int maxDmg;
-    public int armorPenetration;
+    public float armorPenetration;
 }
 
 
 class Sword : Weapon {
     public Sword() { // Ger vapnet ett namn och en minimum damage och max damage som spelet kommer slumpa mellan.
         name = "Sword";
-        minDmg = 15;
-        maxDmg = 30;
-        armorPenetration = 50; //Drar av 50% från fiendens armor
+        minDmg = 40;
+        maxDmg = 60;
+        armorPenetration = 0.5f; //Drar av 50% från fiendens armor
     }
 }
 
@@ -20,6 +20,6 @@ class Pistol : Weapon {
         name = "Pistol";
         minDmg = 50;
         maxDmg = 70;
-        armorPenetration = 80;
+        armorPenetration = 0.8f;
     }
 }

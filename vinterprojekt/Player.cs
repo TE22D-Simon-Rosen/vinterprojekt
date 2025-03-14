@@ -1,18 +1,22 @@
 class Player{
     public string name = "";
-
+    private int hp = 200;
     public int Hp {
-        set {
-            Hp = value;
+        get{
+            return hp;
         }
-        get {
-            return Hp;
+        set{
+            hp = value;
+            if (hp < 0){
+                hp = 0;
+                IsDead = true;
+            }  
         }
     }
 
     public bool IsDead { get; private set; }
 
-    public List<Weapon> Inventory { get; private set; }
+    public int selectedWeapon = 0; //En int för att kunna referera till ett vapen i vapenlistan
     public void SelectWeapon(List<Weapon> weaponList) {
         bool end = false;
         int selected;
@@ -26,8 +30,9 @@ class Player{
             string input = Console.ReadLine();
             if (int.TryParse(input.Trim(), out int result))
             {
+                result -= 1;
                 if (result > 0 && result < weaponList.Count()){
-                    Inventory.Add(weaponList.);
+                    selectedWeapon = result;
                     end = true;
                     break;
                 }
@@ -42,8 +47,17 @@ class Player{
         }
     }
 
-    public void Attack(Enemy target) {
+    public void Attack(Enemy target, List<Weapon> weaponList) {
+        Console.WriteLine($"\nAttacking {target.name}!");
+        Weapon playerWeapon = weaponList[selectedWeapon]; //Gör en variabel för spelarens vapen så man slipper referera till listan med vapen
 
+        double damage = Random.Shared.Next(playerWeapon.minDmg, playerWeapon.maxDmg); //Skapar en random skada mellan spelarens minsta möjliga damage och högsta möjliga damage
+
+        double armor = target.Armor * playerWeapon.armorPenetration; //Hur mycket armor fienden kommer ha kvar efter spelarens armor penetration
+
+        target.Hp -= Convert.ToInt32(damage * armor);
+        Console.WriteLine($"You did {damage * armor} damage!");
+        Console.ReadLine();
     }
 }
 

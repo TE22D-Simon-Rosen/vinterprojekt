@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vinterprojekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a4c89f589f4e1caea824a89c9e136d1d3e1c1f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bc59bb0e4904dbd9e646d94f558539c6e17858e")]
 [assembly: System.Reflection.AssemblyProductAttribute("vinterprojekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vinterprojekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
