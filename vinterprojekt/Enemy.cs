@@ -10,23 +10,24 @@ class Enemy{
             if (hp < 0){
                 hp = 0;
                 IsDead = true;
-            }  
+                Console.WriteLine($"\n{name} died!");
+            }
         }
     }
 
     public int minDamage;
     public int maxDamage;
-    public double Armor;
     public bool IsDead { get; private set; }
 
     public void Attack(Player player){
-        Console.WriteLine($"\n{name} attacks you!");
-        int damage = Random.Shared.Next(minDamage, maxDamage); // Skadar spelaren ett random tal mellan minDamage och maxDamage
-        player.Hp -= damage;
+        if (!IsDead){
+            Console.WriteLine($"\n{name} attacks you!");
+            int damage = Random.Shared.Next(minDamage, maxDamage); // Skadar spelaren ett random tal mellan minDamage och maxDamage
+            player.Hp -= damage;
 
-        Console.WriteLine($"{name} does {damage} damage!");
-        Console.ReadLine();
-
+            Console.WriteLine($"{name} does {damage} damage!");
+            Console.ReadLine();
+        }
     }
 
     public void Delete(List<Enemy> list){
@@ -41,7 +42,6 @@ class Monster : Enemy{
         Hp = 100;
         minDamage = 10;
         maxDamage = 25;
-        Armor = 0.1; //10% armor på fienden. Detta kommer dra av 10% från spelarens damage. 
     }
 }
 
@@ -51,6 +51,5 @@ class Skivan : Enemy{
         Hp = 250;
         minDamage = 40;
         maxDamage = 70;
-        Armor = 0.8;
     }
 }

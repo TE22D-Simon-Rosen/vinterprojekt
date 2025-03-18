@@ -17,10 +17,23 @@ game.createEnemies(enemies);
 
 
 while (!player.IsDead) {
-    player.Attack(enemies[0], weapons);
-    enemies[0].Attack(player);
-
     game.displayStats(player, enemies);
+    
+    player.Attack(enemies[0], weapons);
+    if (!enemies[0].IsDead){
+        enemies[0].Attack(player);
+    }
+    else{
+        enemies[0].Delete(enemies);
+    }
+    
+}
+
+if (player.IsDead){
+    Console.WriteLine("\nYou Lost!");
+}
+else{
+    Console.WriteLine("\nYou Win!");
 }
 
 Console.ReadLine();

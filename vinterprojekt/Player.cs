@@ -24,21 +24,21 @@ class Player{
         while (end == false){
             Console.WriteLine($"Select a weapon: \n");
             foreach (Weapon weapon in weaponList){
-                Console.WriteLine($"{weaponList.IndexOf(weapon) + 1}. {weapon.name} - Damage: {weapon.minDmg}-{weapon.maxDmg} - Armor Piercing: {weapon.armorPenetration}%");
+                Console.WriteLine($"{weaponList.IndexOf(weapon) + 1}. {weapon.name} - Damage: {weapon.minDmg}-{weapon.maxDmg}");
             }
 
             string input = Console.ReadLine();
             if (int.TryParse(input.Trim(), out int result))
             {
                 result -= 1;
-                if (result > 0 && result < weaponList.Count()){
+                if (result >= 0 && result < weaponList.Count()){
                     selectedWeapon = result;
                     end = true;
+                    Console.WriteLine($"You chose {weaponList[result]}");
                     break;
                 }
                 else{
                     Console.WriteLine("Weapon does not exist, try again");
-                    break;
                 }
             }
             else{
@@ -51,12 +51,10 @@ class Player{
         Console.WriteLine($"\nAttacking {target.name}!");
         Weapon playerWeapon = weaponList[selectedWeapon]; //Gör en variabel för spelarens vapen så man slipper referera till listan med vapen
 
-        double damage = Random.Shared.Next(playerWeapon.minDmg, playerWeapon.maxDmg); //Skapar en random skada mellan spelarens minsta möjliga damage och högsta möjliga damage
+        int damage = Random.Shared.Next(playerWeapon.minDmg, playerWeapon.maxDmg); //Skapar en random skada mellan spelarens minsta möjliga damage och högsta möjliga damage
+        target.Hp -= damage;
 
-        double armor = target.Armor * playerWeapon.armorPenetration; //Hur mycket armor fienden kommer ha kvar efter spelarens armor penetration
-
-        target.Hp -= Convert.ToInt32(damage * armor);
-        Console.WriteLine($"You did {damage * armor} damage!");
+        Console.WriteLine($"You did {damage} damage!");
         Console.ReadLine();
     }
 }
