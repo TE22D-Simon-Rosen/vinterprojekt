@@ -1,16 +1,19 @@
 class Player{
     public string name = "";
-    private int hp = 200;
+    private int _hp = 200;
     public int Hp { // Denna är samma som i Enemy klassen
         get{
-            return hp;
+            return _hp;
         }
         set{
-            hp = value;
-            if (hp < 0){
-                hp = 0;
+            _hp = value;
+            if (_hp < 0){
+                _hp = 0;
                 isDead = true;
-            }  
+            }
+            else{
+                isDead = false;
+            }
         }
     }
     public Weapon weapon; // Spelarens vapen

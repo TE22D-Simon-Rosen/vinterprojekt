@@ -1,14 +1,14 @@
 class Enemy{
     public string name = ""; // Monstrets namn
-    private int hp; // Monstrets start hälsa
+    private int _hp; // Monstrets start hälsa
     public int Hp{  // Samma som hp men det är denna man ändrar på under spelets gång för att slippa kolla om hp är under 0 varje gång man ändrar
         get {
-            return hp; // Om programmet ska referera till Hp variabeln så hämtar den hp variabeln med litet h
+            return _hp; // Om programmet ska referera till Hp variabeln så hämtar den hp variabeln med litet h
         }
         set {
-            hp = value; // Om programmet ska ändra variabeln så ändrar den hp med litet h till vad som anges
-            if (hp < 0){ // Men om hp blir mindre än 0 så sätter den hp till 0 och växlar IsDead till true samt skriver att fienden är död
-                hp = 0;  // ^^^ Detta gör så att man slipper skriva kod för att kolla om hp är mindre än 0 varje gång man ska ändra det
+            _hp = value; // Om programmet ska ändra variabeln så ändrar den hp med litet h till vad som anges
+            if (_hp < 0){ // Men om hp blir mindre än 0 så sätter den hp till 0 och växlar IsDead till true samt skriver att fienden är död
+                _hp = 0;  // ^^^ Detta gör så att man slipper skriva kod för att kolla om hp är mindre än 0 varje gång man ska ändra det
                 isDead = true;
                 Console.WriteLine($"\n{name} died!");
             }

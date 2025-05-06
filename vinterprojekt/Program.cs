@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-Player player = new();
+﻿Player player = new();
 Game game = new();
 
 Console.WriteLine("Input a username: ");
@@ -20,31 +18,17 @@ player.SelectWeapon(weapons); // Låter spelaren välja sitt vapen
 game.CreateEnemies(enemies); // Skapar fienderna som spelaren ska slåss mot
 
 
-while (!player.isDead) {
-    game.DisplayStats(player, enemies); // Visar spelarens och fiendens hp innan man attackerar
+
+while (game.play){ // Medans play variabeln är true så kommer spelet att vara igång
+    game.GameLoop(player, enemies); // Kör spellogiken
     
-    player.Attack(enemies.Peek()); // Attackerar fienden man slåss mot just nu
-    if (!enemies.Peek().isDead){ // Kollar om fienden dog så att den inte kan attackera även om den är död
-        enemies.Peek().Attack(player); // Fienden som är längst fram i kön attackerar
+    if (game.CheckRetry() == "y"){ // kollar om man vill fortsätta
+        game.Reset(player, enemies, weapons); // Startar om om man vill köra igen
+        game.GameLoop(player, enemies);
     }
     else{
-        if (enemies.Count() > 0){ // Kollar om kön inte är tom för att undvika att programmet kraschar
-            enemies.Dequeue(); // Tar bort fienden som är längst fram i kön, alltså den man precis dödade
-            Console.ReadLine();
-        }
+        game.play = false; // Om man inte vill fortsätta så avslutas spelet
     }
-
-    if (enemies.Count() == 0){ // Avslutar loopen om alla fiender är döda
-        break;
-    }
-}
-
-
-if (player.isDead){ // Om spelaren dog så skrivs det att man förlora, annars så vinner man
-    Console.WriteLine("\nYou Lost!");
-}
-else{
-    Console.WriteLine("\nYou Win!");
 }
 
 Console.ReadLine();
