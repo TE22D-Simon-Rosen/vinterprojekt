@@ -2,7 +2,7 @@
 Game game = new();
 
 Console.WriteLine("Input a username: ");
-player.name = Console.ReadLine().Trim();
+player.name = Console.ReadLine().Trim(); // Tar bort alla mellanslag som är innan och efter det man skrev
 
 Sword sword = new(); // Skapar två olika vapen som sedan läggs i en lista
 BigSword bigSword = new();
