@@ -17,7 +17,8 @@ player.SelectWeapon(weapons); // Låter spelaren välja sitt vapen
 
 game.CreateEnemies(enemies); // Skapar fienderna som spelaren ska slåss mot
 
-
+Console.WriteLine("Press ENTER to advance after every attack");
+Console.ReadLine();
 
 while (game.play){ // Medans play variabeln är true så kommer spelet att vara igång
     game.GameLoop(player, enemies); // Kör spellogiken
